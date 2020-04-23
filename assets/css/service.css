@@ -1,0 +1,524 @@
+/*body*/
+body{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navbar*/
+ .nav-menu{
+   background: #010718;
+    position: sticky;
+    z-index: 0;
+   }
+.navbar{
+    position: sticky;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+}
+/*Navbar logo edit*/
+.navbar .logo{
+    flex:3;
+    margin-left: 10px;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+.logo img{
+    width: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar body list edit*/
+.navbar .nav-section{
+    flex: 7;
+}
+.nav-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+.nav-section li{
+    list-style: none;
+    flex:3;
+    align-self: center;
+}
+.nav-section .active a{
+    color: #d80202;
+    text-decoration: none;
+}
+.nav-section a{
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+}
+.nav-section a:hover{
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    color: #d80202;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+/*Button used most of the time*/
+.about-btn{
+    position: relative;
+    background: none;
+    margin: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid white;
+    padding: 0.5em 1em;
+}
+ .about-btn::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      right: 20%;
+      top: -0.21em;
+      transform: skewX(-45deg);
+      -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+     .about-btn::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      left: 20%;
+      bottom: -0.25em;
+      transform: skewX(45deg);
+      -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+   .about-btn:hover::before {
+        right: 80%;
+      }
+  .about-btn:hover::after {
+        left: 80%;
+      }
+    
+/*button to open the nav*/
+.nav-open{
+    display: none !important;
+    color: white;
+    font-size: 1.3em;
+}
+
+.nav-open:hover{
+    color: #d80202;
+    border: none;
+    border-bottom: none;
+}
+
+/*------Main-------*/
+
+/*Main-body*/
+.main-body{
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Main-header*/
+.main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/bran.jpg)  ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: (2, 9, 24, 0.755);
+}
+/*About navigation and text displayed under the Nav*/
+.about-nav{
+padding: 20px;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+}
+.about-btn a{
+    text-decoration: none;
+    color: white;
+}
+.about-btn a:hover{
+    text-decoration: none;
+    color: white;
+}
+.about-nav .active{
+    background: rgba(133, 2, 2, 0.548) ;
+}
+ .about-btn{
+    position: relative;
+    background: none;
+    margin: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid white;
+    padding: 0.5em 1em;
+}
+ .about-btn::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      right: 20%;
+      top: -0.21em;
+      transform: skewX(-45deg);
+      -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+     .about-btn::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      left: 20%;
+      bottom: -0.25em;
+      transform: skewX(45deg);
+      -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+   .about-btn:hover::before {
+        right: 80%;
+      }
+  .about-btn:hover::after {
+        left: 80%;
+      }
+    
+   
+.about-text{
+    position: relative;
+    top:100px;
+    display: flex;
+    font-weight: bold;
+    font-size: 2em;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    color:white;
+    background: #010718;
+    margin: 20px;
+    padding: 50px;
+}
+
+/*Main Service */
+.service-main{
+margin: 50px;
+padding: 50px;
+}
+
+.service{
+    padding: 20px;
+}
+.service p{
+    padding: 20px;
+    line-height: 1.7em;
+    font-weight: lighter;
+}
+
+
+/*products and services*/
+.servicepage{
+	padding: 0 30px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+    margin: 20px;
+	
+}
+.servicepage ul{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	 padding: 5px;
+	 position: relative;
+	 margin: 5px ;
+}
+.servicepage ul li:hover,
+.active{
+	border-bottom: 2px solid black!important;
+	color: black!important;
+}
+
+.servicepage ul li{
+	border-bottom: 1px solid grey;
+	color: grey;
+	padding: 10px 5px;
+	font-weight: bold;
+	list-style: none;
+	margin: 20px;
+	font-family: arial;
+	text-transform: capitalize;
+}
+
+.boxed{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.box{
+	box-sizing: border-box;
+	flex: 3;
+	margin: 5px;
+}
+.box img{
+    height: 200px;
+    width: 200px;
+}
+
+/*Footer*/
+footer{
+    color:white;
+    background: #010718;
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.footer{
+ padding: 50px;   
+}
+
+
+/*overlay modal*/
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0%;
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(3, 2, 19, 0.953); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    border: none;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #d80202;
+    border: none;
+    text-decoration: none;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+
+/*Media queries*/
+
+
+ /*Media queries*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 320px) {
+    .nav-open{
+        float: right;
+         display: block !important;
+         font-size: 1.4em;
+         color: white;
+     }
+     .about-text{
+        width: 100%;
+        position: relative;
+        top:100px;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px;
+    }
+    
+    .nav-section li{     display: none;} 
+    
+     .nav-open{
+        float: right;
+         display: block !important;
+         font-size: 1.4em;
+         color: white;
+     }
+     .about-text{
+        width: 100%;
+        position: relative;
+        top:100px;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px;
+    }
+    
+    .nav-section li{     display: none;}
+    
+    .service{margin: 100px 0px ; display: flex; flex-direction: column;}
+    
+    .service h2{font-size: 1.3em;}
+
+    .service p{font-size: 0.7em;}
+  
+}
+
+@media only screen and (min-width: 320px) {
+    .nav-open{
+        float: right;
+         display: block !important;
+         font-size: 1.4em;
+         color: white;
+     }
+     .about-text{
+        width: 100%;
+        position: relative;
+        top:100px;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px;
+    }
+    
+    .nav-section li{     display: none;}
+    
+    .service{margin: 100px 0px ;  display: flex; flex-direction: column;}
+
+    .service h2{font-size: 1.4em;}
+
+    .service p, .service li{font-size: 0.8em;}
+
+    .servicepage{margin:50px 0px;}
+
+    .servicepage h3{font-size: 1.3em;}
+
+    .servicepage li{font-size: 0.95 em;}
+}
+
+
+@media only screen and (min-width: 480px) {
+    .service{margin: 100px 0px ;  display: flex; flex-direction: column;}
+
+    .service h2{font-size: 1.6em;}
+
+    .service p, .service li{font-size: 0.9em;}
+
+    .servicepage{margin:50px 0px;}
+
+    .servicepage h3{font-size: 1.4em;}
+
+    .servicepage li{font-size: 0.95 em;}
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+  @media screen and (min-width: 640px) {
+    .about-text{
+        width: inherit;
+        position: relative;
+        top:100px;
+        font-size: 1.7em;
+        padding: 50px;
+        margin: 50px;
+        align-self: center;
+        justify-self: center;
+    }
+
+}
+
+  /* Medium devices (landscape tablets, 768px and up) */
+    @media screen and (min-width: 768px){
+     .nav-open{ display: none !important; }
+
+     .nav-section li{     display: flex;}  
+
+
+     
+     .service{padding: 50px;}
+
+    .service h2{font-size: 1.7em;}
+
+    .service p{ padding: 0;}
+    .service p, .service li{font-size: 0.95em;}
+
+    .servicepage{margin:50px 0px;}
+
+    .servicepage h3{font-size: 1.5em;}
+
+    .servicepage li{font-size: 1em;}
+
+}
+
+     
+/* Large devices (laptops/desktops, 992px and up) */
+    @media screen and (min-width: 1024px){
+
+    
+        .service p{ padding: 10px;}
+        .service p, .service li{font-size: 1em; font-weight: lighter;}
+    
+        .servicepage{margin:50px 0px;}
+    
+        .servicepage h3{font-size: 1.7em;}
+    
+        .servicepage li{font-size: 1em;}
+    
+    }
+     
+
+    
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media screen and (min-width: 1200px){
+     
+    }

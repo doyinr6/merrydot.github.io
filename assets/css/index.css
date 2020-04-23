@@ -1,0 +1,387 @@
+/*body*/
+body{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navbar*/
+ .nav-menu{
+   background: #010718;
+    position: sticky;
+    z-index: 0;
+   }
+.navbar{
+    position: sticky;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+}
+/*Navbar logo edit*/
+.navbar .logo{
+    flex:3;
+    margin-left: 10px;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+.logo img{
+    width: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar body list edit*/
+.navbar .nav-section{
+    flex: 7;
+}
+.nav-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+.nav-section li{
+    list-style: none;
+    flex:3;
+    align-self: center;
+}
+.nav-section .active a{
+    color: #d80202;
+    text-decoration: none;
+}
+.nav-section a{
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+}
+.nav-section a:hover{
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    color: #d80202;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+/*Button used most of the time*/
+.about-btn{
+    position: relative;
+    background: none;
+    margin: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid white;
+    padding: 0.5em 1em;
+}
+ .about-btn::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      right: 20%;
+      top: -0.21em;
+      transform: skewX(-45deg);
+      -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+     .about-btn::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      left: 20%;
+      bottom: -0.25em;
+      transform: skewX(45deg);
+      -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+   .about-btn:hover::before {
+        right: 80%;
+      }
+  .about-btn:hover::after {
+        left: 80%;
+      }
+    
+/*button to open the nav*/
+.nav-open{
+    display: none;
+    color: white;
+    font-size: 1.3em;
+}
+.nav-open:hover{
+    color: #d80202;
+    border: none;
+    border-bottom: none;
+}
+
+/*------Main-------*/
+
+/*Main-body*/
+.main-body{
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Main-body*/
+.main-one{
+    position: relative;
+}
+.main-two{
+    background:#010718;
+    
+}
+
+/*Carousel item  edit*/
+
+.carousel-item img{
+height: 100vh;
+}
+
+/*Inside the carousel*/
+.merd{
+    top: 30%; 
+}
+.body-content{ 
+    margin: 20px;
+    color: white;   
+}
+.mery{
+    top: 30%;
+}
+.merry{
+    padding: 20px;
+}
+.mery h1{
+    font-size:3.4em;
+}
+
+.main-two-content{
+    color: white;
+    font-size: 1.3em;
+    padding: 30px;
+    text-align: center;
+}
+.main-two i{
+    margin: 10px;
+    font-size: 1.3em;
+    color: #d80202;
+}
+.main-two i:hover{
+    color: #ff6063;
+}
+
+
+
+/*overlay modal*/
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0%;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(3, 2, 19, 0.953); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    border: none;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #d80202;
+    border: none;
+    text-decoration: none;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+
+
+/*Media queries*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 320px) {
+    .nav-section li{
+        display: none;
+    }
+    .nav-open{
+       float: right;
+        display: block;
+        font-size: 1.4em;
+    }
+    .body-content{
+        padding: 30px;
+        text-align: center;
+        background: rgba(14, 13, 15, 0.493);
+    }
+    .body-content span, .body-content p{
+        font-size: 0.7em;
+    }
+    
+    .body-content  h1{
+        font-size:1.5em
+    }
+   .body-content h3{
+        font-size: 1em;
+   }
+   .about-btn{
+    margin: 5px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+}
+
+   
+
+   .main-two-content{
+       font-size: 1em;
+   }
+}
+
+
+@media only screen and (min-width: 480px) {
+
+    .body-content span, .body-content p{
+        font-size: 0.9em;
+    }
+    
+    .merry h1{
+        font-size:1.7em
+    }
+   .body-content h3{
+        font-size: 1.5em;
+   }
+   .about-btn{
+    margin: 5px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+}
+
+   .main-two-content{
+       font-size: 1.2em;
+   }
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+  @media screen and (min-width: 640px) {
+    .body-content span, .body-content p{
+        font-size: 1em;
+    }
+    
+    .merry h1{
+        font-size:1.9em
+    }
+   .body-content h3{
+        font-size: 1.7em;
+   }
+   .about-btn{
+    margin: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+   .main-two-content{
+       font-size: 1.4em;
+   }
+    .nav-section li{
+        display: none;
+    }
+    .nav-open{
+       float: right;
+        display: block;
+        font-size: 1.4em;
+    }
+}
+
+  /* Medium devices (landscape tablets, 768px and up) */
+    @media screen and (min-width: 768px){
+        .nav-open{
+            display: none;
+        }
+        .nav-section li{
+            display: flex;
+        }
+        .body-content h3{
+            font-size: 1.5em;
+       }
+
+    }
+
+     
+/* Large devices (laptops/desktops, 992px and up) */
+    @media screen and (min-width: 1024px){
+        .body-content span, .body-content p{
+            font-size:1.1em;
+        }
+        
+        .merry h1{
+            font-size:1.9em
+        }
+       .body-content h3{
+            font-size: 1.8em;
+       }
+       .about-btn{
+        margin: 10px;
+        font-size: 1em;
+        font-weight: bold;
+        color: white;
+    }
+    
+       .main-two-content{
+           font-size: 1.4em;
+       }
+    }
+     
+
+    
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media screen and (min-width: 1200px){
+     
+    }
